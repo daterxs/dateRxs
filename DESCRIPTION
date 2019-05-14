@@ -5,7 +5,7 @@ Version: 0.1.0
 Language: en-US
 Authors@R: c(
     person("Alejandro", "Baranek", middle = NULL, email= "abaranek@dc.uba.ar", role = c("com","cre", "cph")),
-    person("Antonio", "Vasquez Brust", middle = NULL, email = "antonio@mail.com", role = c("aut","com","cph"))
+    person("Antonio","Vazquez Brust",,"avazquez@gmail.com", c("aut","com","cph"))    
     )
 Maintainer: Alejandro Baranek <abaranek@dc.uba.ar>
 Description: R utils functions & objects for data users
