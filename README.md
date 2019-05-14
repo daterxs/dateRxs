@@ -8,11 +8,22 @@ library(dateRxs)
 USIG_geocode("9 de julio y belgrano")
 ```
 
+```
+               address              address_normalised        lat        lng
+1 9 de julio y belgrano 9 DE JULIO AV. y BELGRANO, CABA -34.613090 -58.381226
+```
+
+```
+USIG_geocode("9 de julio y belgrano, temperley")
+```
 
 ```
 address              address_normalised        lat        lng
 9 de julio y belgrano 9 DE JULIO AV. y BELGRANO, CABA -34.613090 -58.381226
 ```
+
+
+
 
 
 # How to get started (Development version)

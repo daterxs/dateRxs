@@ -21,29 +21,30 @@
 #' USIG_geocode
 #' GEOCODER BASADO EN EL SERVICIO DE USIG GCABA
 #' by Antonio Vazquez Brust
+#' @import futile.logger
 #' @export
 USIG_geocode <- function(address) {
-    
+
     base_url <- "http://servicios.usig.buenosaires.gob.ar/normalizar/"
-    
+
     make_address_query <- function(address) {
         query <- paste0(base_url,
                         "?direccion=",
                         address,
                         "&geocodificar=TRUE")
     }
-    
+
     query <- URLencode(make_address_query(address))
-    
-    print(paste("Trying", query))
-    
+
+    flog.info(paste("Trying", query))
+
     results <- tryCatch(httr:::GET(query),
                         error = function(error_message) {return(NULL)})
-    
-    
-    
+
+
+
     if (!httr:::is.response(results)) {
-        data.frame(address = address, address_normalised = NA, 
+        data.frame(address = address, address_normalised = NA,
                    lat = NA, lng = NA, stringsAsFactors = FALSE)
     } else {
         results <- httr:::content(results)
@@ -56,13 +57,13 @@ USIG_geocode <- function(address) {
             y <- NA
             address_normalised <- NA
         }
-        
-        
+
+
         data.frame(address = address,
                    address_normalised = ifelse(is.null(address_normalised), NA, address_normalised),
                    lat = ifelse(is.null(y), NA, y),
                    lng = ifelse(is.null(x), NA, x),
                    stringsAsFactors = FALSE)
     }
-    
+
 }
