@@ -5,7 +5,7 @@
 
 ```R
 library(dateRxs)
-USIG_geocode("9 de julio y belgrano, temperley")
+USIG_geocode("9 de julio y belgrano")
 ```
 
 
