@@ -22,6 +22,7 @@
 #' GEOCODER BASADO EN EL SERVICIO DE USIG GCABA
 #' by Antonio Vazquez Brust
 #' @import futile.logger
+#' @import httr
 #' @export
 USIG_geocode <- function(address) {
 
@@ -38,7 +39,7 @@ USIG_geocode <- function(address) {
 
     flog.info(paste("Trying", query))
 
-    results <- tryCatch(httr:::GET(query),
+    results <- tryCatch(httr::GET(query),
                         error = function(error_message) {return(NULL)})
 
 
@@ -47,7 +48,7 @@ USIG_geocode <- function(address) {
         data.frame(address = address, address_normalised = NA,
                    lat = NA, lng = NA, stringsAsFactors = FALSE)
     } else {
-        results <- httr:::content(results)
+        results <- httr::content(results)
         if (length(results$direccionesNormalizadas)) {
             x <- results$direccionesNormalizadas[[1]]$coordenadas$x
             y <- results$direccionesNormalizadas[[1]]$coordenadas$y
