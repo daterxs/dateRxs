@@ -18,9 +18,7 @@ USIG_geocode("9 de julio y belgrano, temperley")
 ```
 
 ```
-address              address_normalised        lat        lng
-9 de julio y belgrano 9 DE JULIO AV. y BELGRANO, CABA -34.613090 -58.381226
-                           address address_normalised       lat       lng
+address address_normalised       lat       lng
 1 9 de julio y belgrano, temperley Avenida 9 de Julio y Paso bajo nivel Manuel Belgrano, Lomas de Zamora -34.77974 -58.39645
 ```
 
