@@ -1,9 +1,7 @@
-## GEOCODER BASADO EN EL SERVICIO DE USIG GCABA
-## by Antonio Vazquez Brust
 ##
 ## uso: USIG_geocode(direccion)
 ##
-## Ejpemplos:
+## Ejemplos:
 ## USIG_geocode("9 de julio y belgrano")
 ##
 ## resultado
@@ -20,8 +18,10 @@
 ## 9 de julio y belgrano 9 DE JULIO AV. y BELGRANO, CABA -34.613090 -58.381226
 
 
+#' USIG_geocode
+#' GEOCODER BASADO EN EL SERVICIO DE USIG GCABA
+#' by Antonio Vazquez Brust
 #' @export
-#'
 USIG_geocode <- function(address) {
 
   base_url <- "http://servicios.usig.buenosaires.gob.ar/normalizar/"
