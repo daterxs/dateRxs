@@ -1,0 +1,27 @@
+Package: dateRxs
+Type: Package
+Title: R utils functions & objects for data users
+Version: 0.1.0
+Language: en-US
+Authors@R: c(
+    person("Alejandro", "Baranek", middle = NULL, email= "abaranek@dc.uba.ar", role = c("com","cre", "cph")),
+    person("Antonio", "Vasquez Brust", middle = NULL, email = "antonio@mail.com", role = c("aut","com","cph"))
+    )
+Maintainer: Alejandro Baranek <abaranek@dc.uba.ar>
+Description: R utils functions & objects for data users
+License: GPL
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Suggests: knitr, rmarkdown,
+    covr
+VignetteBuilder: knitr
+Depends: R (>= 3.4)
+Imports: httr,
+         dplyr,
+         testthat,
+         futile.logger
+Collate:
+  'USIG_geocode.R'
+BugReports: https://github.com/daterxs/dateRxs/issues
+URL: https://github.com/daterxs/dateRxs
